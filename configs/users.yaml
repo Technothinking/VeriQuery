@@ -1,0 +1,3 @@
+users:
+  - { user_id: analyst_1, role: analyst, allowed_tables: [customers, products, orders, order_items, returns, marketing_spend], region_scope: [North, South, East, West] }
+  - { user_id: regional_north, role: regional_manager, allowed_tables: [orders, order_items, products], region_scope: [North] }

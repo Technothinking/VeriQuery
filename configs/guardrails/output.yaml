@@ -1,0 +1,4 @@
+grounding:
+  require_citation_for_numbers: true
+hedging:
+  mark_inference: true

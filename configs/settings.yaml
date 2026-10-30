@@ -1,0 +1,7 @@
+limits:
+  sql_row_cap: 1000
+  sql_timeout_ms: 15000
+  max_sql_attempts: 3
+thresholds:
+  approval_cost: 50000
+  min_confidence: 0.6

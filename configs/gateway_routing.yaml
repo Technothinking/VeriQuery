@@ -1,0 +1,4 @@
+tiers:
+  fast:   { primary: TBD, fallback: TBD, per_run_budget_usd: 0.05, cache: true }
+  strong: { primary: TBD, fallback: TBD, per_run_budget_usd: 0.50, cache: true }
+  judge:  { primary: TBD, fallback: TBD, per_run_budget_usd: 1.00, cache: false }

@@ -1,0 +1,2 @@
+injection_patterns: []
+pii_entities: [EMAIL_ADDRESS, PHONE_NUMBER, PERSON]

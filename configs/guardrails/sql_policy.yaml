@@ -1,0 +1,4 @@
+allowed_tables: [customers, products, orders, order_items, returns, marketing_spend]
+blocked_columns: ["customers.email", "customers.phone"]
+require_limit: true
+default_limit: 1000
