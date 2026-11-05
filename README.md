@@ -13,3 +13,5 @@ make test
 
 ## Status
 - [x] Week 1 Day 1: scaffold
+- [x] Week 1 Day 2: warehouse DDL + generator
+- [x] Week 1 Day 3: planted anomalies + data tests

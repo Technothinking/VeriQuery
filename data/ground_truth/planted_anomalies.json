@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "id": "repeat_drop_paid_social_home_kitchen",
+    "role": "true_cause",
+    "description": "In Q3 2025 the 90-day repeat purchase rate collapses for customers acquired via paid_social whose first order contains a Home & Kitchen item.",
+    "metric": "repeat_purchase_rate_90d",
+    "period": {
+      "start": "2025-07-01",
+      "end": "2025-09-30"
+    },
+    "filters": {
+      "acquisition_channel": "paid_social",
+      "first_order_category": "Home & Kitchen"
+    },
+    "parameters": {
+      "drop_probability": 0.8,
+      "customers_affected": 175,
+      "orders_removed": 283
+    },
+    "measured": {
+      "segment_before": {
+        "cohort": 225,
+        "repeat_90d": 0.4133
+      },
+      "segment_after": {
+        "cohort": 225,
+        "repeat_90d": 0.0844
+      },
+      "segment_same_channel_category_q2_2025": {
+        "cohort": 189,
+        "repeat_90d": 0.4974
+      },
+      "all_segments_q3_after": {
+        "other_channels|home_kitchen": {
+          "cohort": 813,
+          "repeat_90d": 0.4379
+        },
+        "other_channels|other_categories": {
+          "cohort": 1512,
+          "repeat_90d": 0.4438
+        },
+        "paid_social|home_kitchen": {
+          "cohort": 225,
+          "repeat_90d": 0.0844
+        },
+        "paid_social|other_categories": {
+          "cohort": 382,
+          "repeat_90d": 0.4974
+        }
+      }
+    }
+  },
+  {
+    "id": "electronics_return_spike",
+    "role": "red_herring",
+    "description": "Electronics return rate spikes in Jul-Aug 2025. Orders are untouched, so this does not explain the repeat purchase drop.",
+    "metric": "return_rate_items",
+    "period": {
+      "start": "2025-07-01",
+      "end": "2025-08-31"
+    },
+    "filters": {
+      "category": "Electronics"
+    },
+    "parameters": {
+      "extra_return_probability": 0.3,
+      "returns_added": 1599
+    },
+    "measured": {
+      "rate_jan_jun_2025": 0.0804,
+      "rate_in_window_before": 0.081,
+      "rate_in_window_after": 0.3513
+    }
+  },
+  {
+    "id": "duplicated_order_items_week",
+    "role": "data_quirk",
+    "description": "Every order_item of orders placed 2025-09-08..2025-09-14 is duplicated (new order_item_id, same order_id/product/quantity/price). Item-level revenue is about 2x orders.total_amount + discount_amount for that week.",
+    "metric": "item_level_revenue",
+    "period": {
+      "start": "2025-09-08",
+      "end": "2025-09-14"
+    },
+    "filters": {},
+    "parameters": {
+      "duplicated_rows": 3982
+    },
+    "measured": {}
+  }
+]
